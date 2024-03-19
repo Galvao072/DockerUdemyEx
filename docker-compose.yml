@@ -1,0 +1,24 @@
+version : "3.8"
+
+services:
+
+  front:
+    container_name: frontend
+    image: "galvao072/imageno:udfront"
+    restart: always
+    ports:
+      - "3000:3000"
+
+  back:
+    container_name: backend
+    image: "galvao072/imageno:udback"
+    restart: always
+    ports:
+      - "3001:3001"
+
+  mongo:
+    container_name: mongo
+    image: "galvao072/imageno:udmong"
+    restart: always
+    ports:
+      - "3002:3002"
